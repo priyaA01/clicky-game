@@ -5,6 +5,16 @@ import Navbar from "./components/Navbar";
 import friends from "./friends.json";
 import "./App.css";
 
+function shuffle(friends) {
+    for (let i = friends.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const friendsTemp = friends[i];
+      friends[i] = friends[j];
+      friends[j] = friendsTemp;
+    }
+    return friends;
+};
+
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
@@ -17,7 +27,6 @@ class App extends Component {
 
  scoreChange = image => {
     const findImage = this.state.unselected.find(item => item.image === image);
-
     if(findImage === undefined) {
         this.setState({ 
             msg: "You clicked image twice!",
@@ -26,25 +35,30 @@ class App extends Component {
             friends: friends,
             unselected: friends
         });
+        this.moveImage();
     }
     else {
-        const newImages = this.state.unselected.filter(item => item.image !== image);
-        
+        const newImages = this.state.unselected.filter(item => item.image !== image);        
         this.setState({ 
             msg: "You clicked image, Score!",
             score: this.state.score + 1,
             friends: friends,
             unselected: newImages
         });
+        this.moveImage();
     }
+
   };
 
-  moveImage = image => {
+  moveImage = () => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
+    const friendsNew = shuffle(this.state.friends);
     // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    this.setState({ 
+      friends : friendsNew,
+    });
   };
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
