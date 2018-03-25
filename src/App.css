@@ -1,18 +1,23 @@
-.title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
+.logo{
+	float:left;
 }
 
 div{
   background-color: pink; 
-  background: linear-gradient(to bottom right, pink, purple);
-  /* background-image: url("background.jpg");
-background-position: center;
-background-clip: 90%; */
+  background: linear-gradient(-45deg, #f15922, #e73564, #d01088);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 7s ease infinite;
+  -moz-animation: Gradient 7s ease infinite;
+  animation: Gradient 7s ease infinite;
 }
 
-.logo{
-	float:left;
-}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
 

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import friends from "./friends.json";
 import "./App.css";
 import logo from './logo.png';
+/*import Shake from "react-shake-effect";*/
 
 function shuffle(friends) {
   for (let i = friends.length - 1; i > 0; i--) {
@@ -36,6 +37,7 @@ class App extends Component {
             friends: friends,
             unselected: friends
         });
+        
         this.moveImage();
     }
     else {

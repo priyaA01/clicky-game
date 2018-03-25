@@ -10,9 +10,8 @@
   overflow: auto;
   width:60%;
   margin-left:20%;
-  box-shadow: 0 3px 6px #999, 0 3px 6px purple;
+  box-shadow: 0 3px 6px #9932CC;
   border-radius:5%;
-  margin-bottom:50px;
 }
 
 .imgshake{
