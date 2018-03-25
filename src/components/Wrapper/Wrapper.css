@@ -1,6 +1,5 @@
 .wrapper {
   padding-top: 50px;
-  /* background: pink; */
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -14,7 +13,7 @@
   border-radius:5%;
 }
 
-.imgshake{
+.wrapper{
   animation: shake 0.7s; 
 }
 
@@ -31,3 +30,4 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
