@@ -4,15 +4,16 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import friends from "./friends.json";
 import "./App.css";
+import logo from './logo.png';
 
 function shuffle(friends) {
-    for (let i = friends.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const friendsTemp = friends[i];
-      friends[i] = friends[j];
-      friends[j] = friendsTemp;
-    }
-    return friends;
+  for (let i = friends.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const friendsTemp = friends[i];
+    friends[i] = friends[j];
+    friends[j] = friendsTemp;
+  }
+  return friends;
 };
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
     const findImage = this.state.unselected.find(item => item.image === image);
     if(findImage === undefined) {
         this.setState({ 
-            msg: "You clicked image twice!",
+            msg: "Game Over",
             topscore: (this.state.score > this.state.topscore) ? this.state.score : this.state.topscore,
             score: 0,
             friends: friends,
@@ -40,7 +41,7 @@ class App extends Component {
     else {
         const newImages = this.state.unselected.filter(item => item.image !== image);        
         this.setState({ 
-            msg: "You clicked image, Score!",
+            msg: "You Scored!",
             score: this.state.score + 1,
             friends: friends,
             unselected: newImages
@@ -51,7 +52,7 @@ class App extends Component {
   };
 
   moveImage = () => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
+    // Shuffle this.state.friends for friends 
     const friendsNew = shuffle(this.state.friends);
     // Set this.state.friends equal to the new friends array
     this.setState({ 
@@ -64,8 +65,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Navbar
-            title="CLICKY GAME"
+      <img src={logo} className="logo img-responsive"/>
+      <Navbar            
             msg={this.state.msg}
             score={this.state.score}
             topscore={this.state.topscore}

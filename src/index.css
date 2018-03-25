@@ -1,10 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Playball', cursive;
 }
 
 html, body, #root {
   padding: 0;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
+}
+
+#root{
+  padding-bottom:50px;
+  
 }

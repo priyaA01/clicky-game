@@ -1,11 +1,8 @@
 .nav{
-	padding: 30px;
-	background-color: black;
-	color:white;
-	font-size:25px;
+	padding-top: 45px;
+	/* background-color: purple; */
+	color:purple;
+	font-size:35px;
+	
 }
 
-.title{
-	font-size:30px;
-	font-weight: bold;
-}

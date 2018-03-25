@@ -3,3 +3,16 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
+div{
+  background-color: pink; 
+  background: linear-gradient(to bottom right, pink, purple);
+  /* background-image: url("background.jpg");
+background-position: center;
+background-clip: 90%; */
+}
+
+.logo{
+	float:left;
+}
+
