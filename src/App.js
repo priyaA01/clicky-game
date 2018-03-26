@@ -28,22 +28,22 @@ function shuffle(friends) {
 class App extends Component {
   // Setting state values
   state= {
-    friends: friends, msg: "Click image once to score!", topscore: 0, score: 0, unselected:friends
+    friends: friends, msg: "Click image once to score!", topscore: 0, score: 0, unselected:friends, style:"wrapper"
   }
   ;
   scoreChange=image=> {
     const findImage=this.state.unselected.find(item=> item.image===image);
     if(findImage===undefined) {
       this.setState( {
-        msg: "Game Over", topscore: (this.state.score > this.state.topscore) ? this.state.score: this.state.topscore, score: 0, friends: friends, unselected: friends
+        msg: "Game Over", topscore: (this.state.score > this.state.topscore) ? this.state.score: this.state.topscore, score: 0, friends: friends, unselected: friends, style:"wrapper shake"
       }
-      );
+      );      
       this.moveImage();
     }
     else {
       const newImages=this.state.unselected.filter(item=> item.image !==image);
       this.setState( {
-        msg: "You Scored!", score: this.state.score + 1, friends: friends, unselected: newImages
+        msg: "You Scored!", score: this.state.score + 1, friends: friends, unselected: newImages, style:"wrapper"
       }
       );
       this.moveImage();
@@ -73,7 +73,9 @@ class App extends Component {
     topscore= {
       this.state.topscore
     }
-    /> <Wrapper> {
+    /> <Wrapper style={
+        this.state.style
+      }> {
       this.state.friends.map(friend=> ( <FriendCard scoreChange= {
         this.scoreChange
       }
