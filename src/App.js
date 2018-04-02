@@ -9,7 +9,6 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import friends from "./friends.json";
 import "./App.css";
-import logo from './logo.png';
 
 // Shuffle this.state.friends for friends     
 function shuffle(friends) {
@@ -61,11 +60,11 @@ class App extends Component {
   ;
   // render
   render() {
-    return ( <div> <img src= {
-      logo
-    }
-    className="logo img-responsive"/> <Navbar msg= {
+    return ( <div> <Navbar msg= {
       this.state.msg
+    }
+    title={
+      "BIRDS"
     }
     score= {
       this.state.score

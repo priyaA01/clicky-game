@@ -1,6 +1,12 @@
 .nav{
-	padding-top: 45px;
+	padding: 15px 0 25px 0;
 	color:white;
 	font-size:35px;	
 }
 
+.title{
+	color:black;
+	font-size: 50px;
+	font-family: 'Monoton', cursive;
+	
+}

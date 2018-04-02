@@ -3,15 +3,15 @@
 }
 
 div {
-  background-color: pink;
-  background: linear-gradient(-45deg, #f15922, #e73564, #d01088);
+  background-color: #c3b45c;
+  /* background: linear-gradient(-45deg, #f15922, #e73564, #d01088);
   background-size: 400% 400%;
   -webkit-animation: Gradient 7s ease infinite;
   -moz-animation: Gradient 7s ease infinite;
-  animation: Gradient 7s ease infinite;
+  animation: Gradient 7s ease infinite; */
 }
 
-@-webkit-keyframes Gradient {
+/* @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -21,4 +21,4 @@ div {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
