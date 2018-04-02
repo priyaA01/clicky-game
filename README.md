@@ -1,4 +1,4 @@
-﻿# Memory Game
+﻿# Clicky Game
 
-A Memory Game built with React.
+A Clicky Game built with React.
 
