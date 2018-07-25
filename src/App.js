@@ -63,7 +63,7 @@ class App extends Component {
       this.state.msg
     }
     title={
-      "BIRDS"
+      "CHIRPY CLICK"
     }
     score= {
       this.state.score
