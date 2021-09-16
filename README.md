@@ -1,4 +1,4 @@
 ﻿# Clicky Game
 
-A Clicky Game built with React.
+A Clicky Game built with React JS.
 
